@@ -1,7 +1,13 @@
-name: sample jobs
+# work flow name
+name: 'sample jobs'
+# trigger
 on: [push]
+
+# job
 jobs:
   sample_job_01:
     name: Job Run Test 01
-  sample_job_02:
-    name: Job Run Test 02
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello world #ステップ名
+         run: echo "hello world!!"
