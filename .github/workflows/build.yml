@@ -8,6 +8,6 @@ jobs:
   sample_job_01:
     name: Job Run Test 01
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: hello world #ステップ名
-         run: echo "hello world!!"
+        run: echo "hello world!!" #実行したいコマンドを記述する
