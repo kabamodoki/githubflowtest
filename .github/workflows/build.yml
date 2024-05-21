@@ -1,3 +1,5 @@
+name: sample jobs
+on: [push]
 jobs:
   sample_job_01:
     name: Job Run Test 01
