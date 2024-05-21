@@ -5,9 +5,29 @@ on: [push]
 
 # job
 jobs:
-  sample_job_01:
-    name: Job Run Test 01
+  # sample_job_01:
+  #   name: Job Run Test 01
+  #   runs-on: ubuntu-latest
+  #   steps: 
+  #     - name: hello world #ステップ名
+  #       run: echo "hello world!!" #実行したいコマンドを記述す
+  
+  # アプリケーションビルドテスト
+  aplication-test:
+    name: 01_application_build
     runs-on: ubuntu-latest
     steps: 
-      - name: hello world #ステップ名
-        run: echo "hello world!!" #実行したいコマンドを記述する
+      - name: checkout
+        uses: actions/checkout@v4
+      
+      - name: setup java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          architecture: x64
+          cahe: maven
+      
+      - name: test start
+        run: mvn test
+        
