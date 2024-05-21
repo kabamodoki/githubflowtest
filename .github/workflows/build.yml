@@ -14,7 +14,7 @@ jobs:
   
   # アプリケーションビルドテスト
   aplication-test:
-    name: 01_application_build
+    name: aplication-test
     runs-on: ubuntu-latest
     steps: 
       - name: checkout
