@@ -1,0 +1,5 @@
+jobs:
+  sample_job_01:
+    name: Job Run Test 01
+  sample_job_02:
+    name: Job Run Test 02
